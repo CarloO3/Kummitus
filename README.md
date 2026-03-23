@@ -1,5 +1,7 @@
 # Kummitus — DOF from Poles
 
+![Kummitus](Kummitus.png)
+
 **Kummitus** is a Mathematica package for computing the physical degrees of freedom of higher-spin field theories directly from the poles of the saturated propagator. It is built on top of the [xAct](http://www.xact.es/) tensor algebra system (xTensor, xPert, xCoba, xTras).
 
 Copyright © 2026, Carlo Marzo — General Public License.
