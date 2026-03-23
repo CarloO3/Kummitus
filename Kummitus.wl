@@ -49,8 +49,9 @@ Get[FileNameJoin[{pkgDir, "SystemSolver.wl"}]];
 
 
 (* Public symbols + usage *)
-dd::usage = "Flat Derivative - Access to XAct's PD fiducial derivative";
-ConstantSymbols::usage = "Access DefConstantSymbol of XAct";
+dd::usage = "Flat Derivative - Access to XAct's PD fiducial derivative.";
+ConstantSymbols::usage = "Access XAct' DefConstantSymbol.";
+Canonicalize::usage = "Access XAct' CollectTensors.";
 
 
 SourceDeclare::usage = "It defines all the necessary rules to go from tensor to the minimal set of independent components.";
@@ -72,12 +73,12 @@ masslessSolutionConj::usage = "...";
 TensorToHelicity::usage = "...";
 
 
-sv::usage = "...";
-svc::usage = "...";
-sh::usage = "...";
-shc::usage = "...";
-sa::usage = "...";
-sac::usage = "...";
+sv::usage = "Helicity amplitude.";
+svc::usage = "Conjugate helicity amplitude.";
+sh::usage = "Helicity amplitude.";
+shc::usage = "Conjugate helicity amplitude.";
+sa::usage = "Helicity amplitude.";
+sac::usage = "Conjugate helicity amplitude.";
 
 
 
@@ -291,6 +292,8 @@ DefConstantSymbol[SJc];
 Begin["`Private`"]
 
 ConstantSymbols[input_]:= Block[{Print = (Null &)},DefConstantSymbol[input];];
+
+Canonicalize[input_]:= CollectTensors[input]
 
 
 dd[input_][input2_]:=PD[input][input2];
@@ -2090,9 +2093,9 @@ If[MemberQ[masses, 0],
     PrintK["=== Analyzing massless sector ==="];
     {masslessSolution, masslessSolutionConj, masslessFreeVars, masslessNDependent} = 
         Simplify[analyzeMasslessSpectrum[]];
+PrintK[masslessSolution];
 ];
 
-PrintK[masslessSolution];
 
 (* Step 6b: Massive analysis *)
 massivePoles = DeleteCases[masses, 0];
