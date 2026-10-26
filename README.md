@@ -151,7 +151,7 @@ DeclareField[B, "rank3", "Symmetry" -> "Sym23"]    (* each rank-3 field may have
 
 Supported types: `"rank3"`, `"rank2sym"`, `"rank2anti"` (antisymmetric, Kalb–Ramond), `"vector"`, `"scalar"`. Default names are `εXp` for the perturbation and `XJ`, `XJc` for the sources; the options `"Perturbation"`, `"Source"`, `"ConjugateSource"` override them. The built-in `A`, `H`, `V`, `S` are declared the same way at load time. `FieldInstances[]` lists the registry.
 
-The antisymmetric rank-2 field has no built-in instance; declare one with `DeclareField[B, "rank2anti"]`. It lives in the 1⁺ (projector label 4) and 1⁻ (label 9) sectors and mixes with all other fields through the projectors in `ProjectorsLibrary.m`. The library sets the phase `XX3 = π`, which the antisymmetric mixing projectors require: with `XX3 = 0` the vector–antisymmetric products in 1⁻ do not close. `Kummitus.wl` therefore leaves `XX3` untouched (`XX1 = XX2 = XX4 = 0`).
+The antisymmetric rank-2 field has no built-in instance; declare one with `DeclareField[B, "rank2anti"]`. It lives in the 1⁺ (projector label 4) and 1⁻ (label 9) sectors and mixes with all other fields through the projectors in `ProjectorsLibrary.m`. 
 
 Copies share the projectors: in each J^P sector the basis is the list of pairs `{field, label}`, ordered by rank (highest first) and then by declaration order. Gauge fixing removes, in order of preference, higher rank, then later-declared copies, then higher labels.
 
