@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use Kummitus in your research, please cite the papers below."
+title: "Kummitus"
+abstract: "A Mathematica package, built on xAct, for computing the physical degrees of freedom of free field theories (tensors up to rank 3, several copies of the same field) from the poles and residues of the saturated propagator."
+authors:
+  - family-names: Marzo
+    given-names: Carlo
+license: GPL-3.0-only
+keywords:
+  - quantum field theory
+  - particle spectrum
+  - ghosts and tachyons
+  - spin projectors
+  - Mathematica
+  - xAct
+preferred-citation:
+  type: article
+  title: "Kummitus: a light-weight toolbox for counting DOF in perturbative QFT"
+  authors:
+    - family-names: Marzo
+      given-names: Carlo
+  year: 2026
+  month: 3
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/2603.22451"
+  identifiers:
+    - type: other
+      value: "arXiv:2603.22451"
+      description: "arXiv identifier"
+references:
+  - type: article
+    title: "Ghost and tachyon free propagation up to spin 3 in Lorentz invariant field theories"
+    authors:
+      - family-names: Marzo
+        given-names: Carlo
+    journal: "Physical Review D"
+    volume: 105
+    issue: 6
+    start: "065017"
+    year: 2022
+    doi: "10.1103/PhysRevD.105.065017"
+    url: "https://arxiv.org/abs/2108.11982"
